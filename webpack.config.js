@@ -1,15 +1,13 @@
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-  template: __dirname + '/src/index.html',
-  filename: 'index.html',
-  inject: 'body'
-});
-
+const appRootPath = __dirname;
+const path = require('path');
 
 module.exports = {
-  entry: __dirname + '/src/index.js',
+  entry: {
+    app: path.resolve(appRootPath, 'src', 'index.js'),
+  },
   module: {
     loaders: [
       {
@@ -26,12 +24,16 @@ module.exports = {
   },
 
   output: {
-    filename: 'bundle.js',
-    path: __dirname + '/build'
+    filename: '[name].js',
+    path: path.resolve(appRootPath, 'build')
   },
 
   plugins: [
-    HTMLWebpackPluginConfig,
+    new HTMLWebpackPlugin({
+      template: path.resolve(appRootPath, 'src', 'index.html'),
+      filename: 'index.html',
+      inject: 'body'
+    }),
     new ExtractTextPlugin({
       filename: 'styles/[name].css',
       allChunks: true
@@ -41,5 +43,7 @@ module.exports = {
         messages: ['Dev server running at http://localhost:3000']
       }
     })
-  ]
+  ],
+
+  devtool: 'source-map' 
 };
