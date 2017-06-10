@@ -19,6 +19,11 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         loaders: ExtractTextPlugin.extract('css-loader!sass-loader')
+      },
+      
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        loader: 'file-loader'
       }
     ]
   },

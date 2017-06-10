@@ -6,6 +6,8 @@
   "author": "Spriithy",
   "license": "ISC",
   "dependencies": {
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.2.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
@@ -17,6 +19,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.28.0",
     "node-sass": "^4.5.3",
