@@ -1,0 +1,67 @@
+div#Modals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  color: black;
+
+  padding: 50px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  & > div {
+    max-width: 70%;
+    margin: 0 auto;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  & .LoginModalForm {
+    width: 100%;
+    padding: 10px;
+  }
+
+  & .ModalControls {
+    padding: 10px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+
+    & span {
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    & > button {
+      color: #444444;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      color: white;
+      margin-left: 10px;
+    }
+  }
+
+  & input {
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+    outline: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    background: #fafafa;
+    padding: 5px 10px;
+    font-size: 18px;
+
+    &:active, &:focus {
+      border: 1px solid #3c98ff;
+      outline: none;
+    }
+  }
+}
