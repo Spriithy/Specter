@@ -9,6 +9,7 @@ import '../styles/shared.scss';
 import '../styles/materialize.scss';
 
 var initialState = {
+  logged: false,
   toolbar: true,
   modal: null,
 };
@@ -22,17 +23,30 @@ export default class Layout extends Component {
       {
         handlers: {
           toggleToolBar: this.toggleToolBar,
-          toggleModal: this.toggleModal
+          toggleModal: this.toggleModal,
+          login: this.login,
+          logout: this.logout,
         }
       }
     );
   }
 
-  toggleModal = (x) => {
-    console.log(x);
+  login = (u, p) => {
     this.setState(Object.assign(this.state,
-      { modal: x })
-    );
+      { logged: true }
+    ));
+  }
+
+  logout = () => {
+    this.setState(Object.assign(this.state,
+      { logged: false }
+    ));
+  }
+
+  toggleModal = (x) => {
+    this.setState(Object.assign(this.state,
+      { modal: x }
+    ));
   }
 
   toggleToolBar = () => {

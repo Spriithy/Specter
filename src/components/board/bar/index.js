@@ -18,7 +18,7 @@ export default class BoardBar extends Component {
         <div id="BoardBar">
           <ul className="BreadCrumb">
             <li className="text">Produits</li>
-            <li onClick={() => this.props.globs.handlers.toggleModal(<LoginModal globs={this.props.globs}/>)}><i className="material-icons md-24">add</i></li>
+            <li><i className="material-icons md-24">add</i></li>
             <li className="current"><i className="material-icons md-24">create</i></li>
             <li className="disabled"><i className="material-icons md-24">more_horiz</i></li>
             <li className="right cancel"><i className="material-icons md-24">close</i></li>

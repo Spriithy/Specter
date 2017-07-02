@@ -5,7 +5,6 @@ div#Modals {
   width: 100%;
   height: 100%;
   z-index: 1;
-  color: black;
 
   padding: 50px;
 
@@ -17,11 +16,6 @@ div#Modals {
     background-color: white;
     overflow: hidden;
     position: relative;
-  }
-
-  & .LoginModalForm {
-    width: 100%;
-    padding: 10px;
   }
 
   & .ModalControls {
@@ -37,15 +31,13 @@ div#Modals {
       height: 30px;
       vertical-align: middle;
     }
-
-    & > button {
-      color: #444444;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      color: white;
-      margin-left: 10px;
-    }
+  }
+  
+  &  button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
   }
 
   & input {
@@ -58,6 +50,7 @@ div#Modals {
     background: #fafafa;
     padding: 5px 10px;
     font-size: 18px;
+    margin-top: 15px;
 
     &:active, &:focus {
       border: 1px solid #3c98ff;

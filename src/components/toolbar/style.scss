@@ -1,4 +1,5 @@
 div#ToolBar {
+  z-index: 0;
   width: 20%;
   height: 100%;
   position: absolute;
@@ -6,9 +7,97 @@ div#ToolBar {
   bottom: 0;
   left: 0;
 
-  padding: 10px;
-
   background: #fafafa;
   overflow-x: hidden;
   overflow-y: auto;
+
+  & > div.ToolBarActions {
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+    
+    & > button {
+      width: 50%;
+      height: 100%;
+      display: inline-block;
+      border: none;
+      outline: none;
+      background-color: #eee;
+      color: #666;
+
+      text-transform: uppercase;
+
+      &.login {
+        width: 100%;
+        color: white;
+        background-color: #64B5F6;
+
+        &:hover {
+          background-color: #3c98ff;
+          transition: background-color 0.4s ease-in-out;
+        }
+      }
+
+      &.save {
+        color: white;
+        background-color: rgba(#57c06a, 0.75);
+        
+        &:hover {
+          background-color: #57c06a;
+          transition: background-color 0.4s ease-in-out;
+        }
+      }
+      
+      &.quit {
+        color: white;
+        background-color: rgba(#FF3C3C, 0.75);
+        
+        &:hover {
+          background-color: #FF3C3C;
+          transition: background-color 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+
+  & > ul.GeneralOptions {
+    width: 100%;
+    display: block;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+
+    & > li.option {
+      width: 100%;
+      padding: 8px;
+      height: 40px;
+      display: inline-block;
+      background-color: #eee;
+      color: #666;
+
+      text-transform: uppercase;
+      vertical-align: middle;
+      cursor: pointer;
+
+      & > span {
+        vertical-align: middle;
+        height: 40px;
+        font-size: 18px;
+      }
+
+      & > i {
+        vertical-align: middle;
+        padding-top: 1px;
+      }
+
+      &.current {
+        color: white;
+        background-color: #64B5F6;
+      }
+
+      &:hover {
+        color: white;
+        background-color: #3c98ff;
+      }
+    }
+  }
 }
