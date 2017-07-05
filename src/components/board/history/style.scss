@@ -1,0 +1,103 @@
+div.BoardHistory {
+  padding: 10px;
+  height: 100%;
+
+  overflow-y: auto;
+
+  & table {
+    width: 100%;
+    background-color: #fafafa;
+
+    & tr {
+      & th, td {
+        text-align: center;
+        padding: 5px;
+
+        height: 40px;
+
+        &.col-type, &.col-time {
+          width: 70px;
+        }
+
+        &.col-user, &.col-action {
+          width: 130px;
+        }
+      } 
+    }
+
+    & .col-desc {
+      text-align: left;
+    }
+
+    & tr.row {
+      &.error {
+        color: #800000;
+        background-color: #ff9595;
+
+        & td {
+          border-radius: 0;
+        }
+                
+        &:hover {
+          background-color: #FF5656;  
+        }
+      }
+
+      &.success {
+        color: #008015;
+        background-color: #7fea91;
+
+        & td {
+          border-radius: 0;
+        }
+                
+        &:hover {
+          background-color: #4ce265;  
+        }
+      }
+
+      &.warning {
+        color: #998a36;
+        background-color: #fff5bd;
+
+        & td {
+          border-radius: 0;
+        }
+                
+        &:hover {
+          background-color: #FFE75A;  
+        }
+      }
+
+      &.neutral {
+        color: #444;
+        background-color: #eee;
+
+        & td {
+          border-radius: 0;
+        }
+                
+        &:hover {
+          background-color: #ddd;  
+        }
+      }
+
+      &.info {
+        color: #375466;
+        background-color: #c4e9ff;
+
+        & td {
+          border-radius: 0;
+        }
+
+        &:hover {
+          background-color: #8AD3FF;  
+        }
+      }
+    
+      & .col-type {
+        background-color: #fafafa;
+      }
+    }
+  }
+}

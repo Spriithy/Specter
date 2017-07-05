@@ -9,7 +9,7 @@ import './style.scss';
 export default class BoardBar extends Component {
   render = () => {
     return (
-      <div>
+      <div id="BoardBarWrap">
         <div id="ToolBarToggle" onClick={this.props.globs.handlers.toggleToolBar}>
           <i className="material-icons md-36">
             {this.props.globs.toolbar ? "chevron_left" : "chevron_right"}
@@ -17,12 +17,8 @@ export default class BoardBar extends Component {
         </div>
         <div id="BoardBar">
           <ul className="BreadCrumb">
-            <li className="text">Produits</li>
-            <li><i className="material-icons md-24">add</i></li>
-            <li className="current"><i className="material-icons md-24">create</i></li>
-            <li className="disabled"><i className="material-icons md-24">more_horiz</i></li>
-            <li className="right cancel"><i className="material-icons md-24">close</i></li>
-            <li className="right validate"><i className="material-icons md-24">check</i></li>
+            <li className="text">{this.props.globs.content !== null ? this.props.globs.content.name : "Specter"}</li>
+            {this.props.globs.content !== null ? this.props.globs.content.actions : null}
           </ul>
         </div>
       </div>
